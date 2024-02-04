@@ -1,0 +1,23 @@
+CREATE TABLE Cab (
+    cno INT PRIMARY KEY,
+    model VARCHAR(50) NOT NULL,
+    colour VARCHAR(20) NOT NULL,
+    purchase_date DATE NOT NULL
+);
+
+CREATE TABLE Driver (
+    did INT PRIMARY KEY,
+    dname VARCHAR(50) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    rating FLOAT CHECK (rating >= 0 AND rating <= 5),
+    age INT NOT NULL CHECK (age >= 18)
+);
+
+CREATE TABLE AllotedIn (
+    cno INT,
+    did INT,
+    datel DATE,
+    PRIMARY KEY (cno, did, datel),
+    FOREIGN KEY (cno) REFERENCES Cab(cno),
+    FOREIGN KEY (did) REFERENCES Driver(did)
+);

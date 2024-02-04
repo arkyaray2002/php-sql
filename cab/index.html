@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab Record Insertion Form</title>
+</head>
+<body>
+
+<h2>Insert Cab Record</h2>
+
+<form action="insert_cab.php" method="post">
+    <label for="cno">Cab Number (cno):</label>
+    <input type="text" id="cno" name="cno" required><br>
+
+    <label for="model">Model:</label>
+    <input type="text" id="model" name="model" required><br>
+
+    <label for="colour">Colour:</label>
+    <input type="text" id="colour" name="colour" required><br>
+
+    <label for="purchase_date">Purchase Date:</label>
+    <input type="date" id="purchase_date" name="purchase_date" required><br>
+
+    <input type="submit" value="Insert Record">
+</form>
+
+</body>
+</html>
